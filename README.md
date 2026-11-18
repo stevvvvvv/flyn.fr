@@ -35,11 +35,19 @@ Nom de domaine `flyn.fr` (seulement si tu l'as acheté) : Settings > Pages > Cus
 chez le registrar des enregistrements `A` vers les IP GitHub Pages et un `CNAME` `www` vers
 `stevvvvvv.github.io` (voir la doc GitHub Pages).
 
+## Brancher le formulaire (5 minutes)
+
+1. Crée un compte gratuit sur formspree.io, puis un formulaire « Tests Flyn ».
+2. Copie son adresse (`https://formspree.io/f/xxxxxx`) et remplace `[URL_DU_FORMULAIRE]` dans `index.html`.
+3. Envoie un test depuis le site : l'inscription arrive par e-mail et dans le tableau Formspree.
+
+Tant que l'adresse n'est pas remplacée, le bouton affiche un message au lieu d'envoyer dans le vide.
+Le champ caché `_gotcha` bloque les robots.
+
 ## À compléter avant d'annoncer le site
 
-- `[URL_DU_FORMULAIRE]` : l'adresse du service qui reçoit les inscriptions (Tally, Formspree ou Brevo). Un site statique ne peut pas enregistrer un formulaire tout seul.
-- `[LIEN LINKEDIN]`, `[LIEN LINKEDIN STEVEN]`, `[contact@domaine]`.
-- `[RAISON SOCIALE · SIREN]` une fois la SASU immatriculée.
-- Pages *Mentions légales* et *Confidentialité* (obligatoires dès qu'on collecte des e-mails, RGPD).
+- `index.html` : `[URL_DU_FORMULAIRE]`, `[LIEN LINKEDIN]`, `[LIEN LINKEDIN STEVEN]`, `[contact@domaine]`, `[RAISON SOCIALE · SIREN]`.
+- `mentions-legales.html` et `confidentialite.html` : les champs surlignés en jaune (société, adresse, SIREN,
+  service de formulaire). Ces deux pages sont des modèles : à faire relire avant publication.
 
 Rechercher `[` dans `index.html` pour trouver tous les champs à remplir.

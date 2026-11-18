@@ -243,7 +243,9 @@
 <section class="section light" id="tests">
   <div class="wrap signup">
     <div class="head" style="margin:0"><span class="label">Programme de tests</span><h2>Testez Flyn sur simulateur.</h2><p>On cherche des pilotes, des élèves, des instructeurs et des écoles pour tester le prototype et nous dire ce qui manque vraiment dans le cockpit. 20 minutes d'échange suffisent pour commencer.</p></div>
-    <form class="form" action="[URL_DU_FORMULAIRE]" method="POST">
+    <form class="form" id="signup" action="[URL_DU_FORMULAIRE]" method="POST">
+      <input type="hidden" name="_subject" value="Nouvelle inscription aux tests Flyn">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <div class="row2">
         <label class="field">Prénom<input type="text" name="prenom" autocomplete="given-name" required></label>
         <label class="field">E-mail<input type="email" name="email" autocomplete="email" required></label>
@@ -252,8 +254,9 @@
         <select name="profil"><option>Élève pilote</option><option>Pilote privé</option><option>Instructeur</option><option>École ou aéroclub</option><option>Autre</option></select>
       </label>
       <label class="field">Avion ou simulateur habituel<input type="text" name="avion" placeholder="ex. DR400, C172, X-Plane"></label>
-      <label class="consent"><input type="checkbox" name="consentement" required>J'accepte d'être contacté au sujet des tests de Flyn. Mes données ne sont pas partagées et je peux me désinscrire à tout moment.</label>
+      <label class="consent"><input type="checkbox" name="consentement" value="oui" required>J'accepte d'être contacté au sujet des tests de Flyn. Mes données ne sont ni vendues ni partagées, et je peux me désinscrire à tout moment (<a href="confidentialite.html">confidentialité</a>).</label>
       <button class="btn btn-dark" type="submit">Je veux tester Flyn</button>
+      <p class="form-status" id="signup-status" role="status" aria-live="polite"></p>
     </form>
   </div>
   <div class="wrap" style="margin-top:96px">
@@ -270,8 +273,8 @@
     <a class="nav-logo" href="#top" aria-label="Flyn, haut de page"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1a2436"/><g fill="none" stroke="#38cbd8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 30 H23 L27 36"/><path d="M54 30 H41 L37 36"/></g><circle cx="32" cy="30" r="3.5" fill="#38cbd8"/></svg><svg width="48" height="33" viewBox="0 0 140 96" aria-hidden="true"><g fill="none" stroke="#eef1f5" stroke-width="9"><path d="M10 70 V22 A12 12 0 0 1 22 10 H31"/><path d="M1 34.5 H27"/><path d="M42 5.5 V70"/><path d="M58 25.5 V50.5 A15 15 0 0 0 88 50.5"/><path d="M88 25.5 V75 A15 15 0 0 1 73 90 H60"/><path d="M104 25.5 V70"/><path d="M104 45 A15 15 0 0 1 134 45 V70"/></g></svg></a>
     <span>Flyn · [RAISON SOCIALE · SIREN] · Paris</span>
     <a href="mailto:[CONTACT@DOMAINE]">[contact@domaine]</a>
-    <a href="[MENTIONS LÉGALES]">Mentions légales</a>
-    <a href="[CONFIDENTIALITÉ]">Confidentialité</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="confidentialite.html">Confidentialité</a>
     <small>Flyn One est un concept en développement : rendu 3D et caractéristiques non définitifs. Prototype non certifié.</small>
   </div>
 </footer>
@@ -305,6 +308,25 @@ function onScroll() {
   nav.classList.toggle('scrolled', scrollY > 20);
 }
 addEventListener('scroll', onScroll, { passive: true });
+// Formulaire : envoi sans quitter la page (Formspree), garde-fou tant qu'il n'est pas branché
+const form = document.getElementById('signup');
+const status = document.getElementById('signup-status');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (form.action.includes('%5BURL') || form.getAttribute('action').startsWith('[')) {
+    status.textContent = 'Le formulaire n\u2019est pas encore branché. Écrivez-nous en attendant : [contact@domaine].';
+    return;
+  }
+  status.textContent = 'Envoi…';
+  try {
+    const r = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+    if (!r.ok) throw new Error(String(r.status));
+    form.reset();
+    status.textContent = 'Merci ! On vous recontacte très vite pour organiser un premier échange.';
+  } catch {
+    status.textContent = 'L\u2019envoi a échoué. Réessayez, ou écrivez-nous : [contact@domaine].';
+  }
+});
 addEventListener('resize', onScroll);
 onScroll();
 </script>

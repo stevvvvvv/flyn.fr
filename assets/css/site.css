@@ -201,6 +201,15 @@ a { color: inherit; }
 .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.86rem; color: var(--muted-d); line-height: 1.5; }
 .consent input { width: 18px; height: 18px; margin-top: 2px; flex: none; }
 .form .btn { width: 100%; min-height: 54px; font-size: 1rem; }
+.form-status { margin: 0; min-height: 1.4em; font-size: 0.92rem; color: var(--cyan-d); }
+.consent a { color: var(--cyan-d); }
+/* Pages légales */
+.legal { max-width: 760px; margin: 0 auto; padding: 140px 24px 96px; color: var(--ink-d); }
+.legal h1 { font-family: var(--display); font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 8px; }
+.legal h2 { font-size: 1.2rem; margin: 36px 0 10px; }
+.legal p, .legal li { line-height: 1.7; color: #3a4252; }
+.legal .todo { background: #fff3cd; padding: 0 4px; border-radius: 3px; }
+.legal-page { background: var(--dawn); }
 @media (max-width: 900px) { .signup { grid-template-columns: minmax(0, 1fr); gap: 32px; } .row2 { grid-template-columns: minmax(0, 1fr); } }
 
 /* Fondateur */

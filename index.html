@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flyn — Your intelligent flight companion</title>
+<meta name="description" content="Flyn est un copilote IA consultatif pour l'aviation légère : checklists vocales, surveillance des écarts, rappel des clairances, documentation sourcée. Prototype en test sur simulateur.">
+<meta property="og:title" content="Flyn — Your intelligent flight companion">
+<meta property="og:description" content="Copilote IA consultatif pour l'aviation légère. Prototype en test sur simulateur.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b111c">
+<link rel="icon" type="image/svg+xml" href="assets/flyn-mark.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+html{scroll-behavior:smooth}
+a{color:#0b7c88}a:hover{color:#0b111c}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #38cbd8;outline-offset:2px}
+</style>
+</head>
+<body>
+<div id="top" style="background: #f5f3ee; color: #0b111c; font-family: Inter, system-ui, sans-serif">
+  <header style="background: #0b111c; border-bottom: 1px solid #2a3549">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; min-height: 4.5rem; display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; padding-top: 0.75rem; padding-bottom: 0.75rem">
+      <a href="#top" aria-label="Flyn, accueil" style="display: flex; align-items: center; gap: 10px; text-decoration: none"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1a2436"/><g fill="none" stroke="#38cbd8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 30 H23 L27 36"/><path d="M54 30 H41 L37 36"/></g><circle cx="32" cy="30" r="3.5" fill="#38cbd8"/></svg><svg width="48" height="33" viewBox="0 0 140 96" aria-hidden="true"><g fill="none" stroke="#eef1f5" stroke-width="9"><path d="M10 70 V22 A12 12 0 0 1 22 10 H31"/><path d="M1 34.5 H27"/><path d="M42 5.5 V70"/><path d="M58 25.5 V50.5 A15 15 0 0 0 88 50.5"/><path d="M88 25.5 V75 A15 15 0 0 1 73 90 H60"/><path d="M104 25.5 V70"/><path d="M104 45 A15 15 0 0 1 134 45 V70"/></g></svg></a>
+      <nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: 0.9375rem">
+        <a href="#produit" style="color: #c7cfdb; text-decoration: none">Produit</a>
+        <a href="#fonctionnement" style="color: #c7cfdb; text-decoration: none">Fonctionnement</a>
+        <a href="#securite" style="color: #c7cfdb; text-decoration: none">Sécurité</a>
+        <a href="#avancees" style="color: #c7cfdb; text-decoration: none">Avancées</a>
+      </nav>
+      <a href="#tests" style="margin-left: auto; min-height: 2.75rem; display: flex; align-items: center; padding: 0 1.25rem; border-radius: 10px; background: #38cbd8; color: #04242a; font-weight: 600; font-size: 0.9375rem; text-decoration: none">Rejoindre les tests</a>
+    </div>
+  </header>
+  <section style="background: #0b111c; color: #eef1f5">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; padding-top: 5rem; padding-bottom: 5rem">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 1.5rem">
+        <span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #38cbd8">PROTOTYPE EN DÉVELOPPEMENT · TESTS SUR SIMULATEUR</span>
+        <h1 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(2.25rem, 7vw, 3.5rem); line-height: 1.05; font-weight: 700; letter-spacing: -0.02em">Your intelligent flight companion.</h1>
+        <p style="margin: 0; font-size: 1.25rem; line-height: 1.875rem; color: #c7cfdb">Flyn est un copilote IA consultatif pour l'aviation légère. Il déroule vos checklists à la voix, surveille les écarts, garde vos clairances en mémoire et cite toujours ses sources. Il ne pilote jamais.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem">
+          <a href="#tests" style="min-height: 3rem; display: flex; align-items: center; padding: 0 1.5rem; border-radius: 10px; background: #38cbd8; color: #04242a; font-weight: 600; text-decoration: none">Rejoindre les premiers tests</a>
+          <a href="#avancees" style="min-height: 3rem; display: flex; align-items: center; padding: 0 1.5rem; border-radius: 10px; border: 1px solid #3a4a66; color: #eef1f5; font-weight: 600; text-decoration: none">Suivre le projet</a>
+        </div>
+      </div>
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; justify-content: center"><svg width="100%" height="auto" style="display: block; max-width: 640px; width: 100%; height: auto" viewBox="170 320 870 460" role="img" aria-label="Rendu conceptuel du boîtier Flyn One et du bouton Flyn PTT">
+      <defs>
+        <filter id="glowsite" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="4"/></filter>
+        <filter id="softsite" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+      </defs>
+      <ellipse cx="540" cy="760" rx="300" ry="60" fill="#000000" opacity="0.55" filter="url(#softsite)"/>
+      <ellipse cx="930" cy="712" rx="75" ry="20" fill="#000000" opacity="0.5" filter="url(#softsite)"/>
+      <!-- top face -->
+      <path d="M260 470 L592.5 662 L810.7 536 L478.2 344 Z" fill="#1f2a3d" stroke="#3a4a66" stroke-width="1.5" stroke-linejoin="round"/>
+      <!-- front face -->
+      <path d="M260 470 L592.5 662 L592.5 752 L260 560 Z" fill="#151e2d" stroke="#2a3549" stroke-width="1.5" stroke-linejoin="round"/>
+      <!-- side face -->
+      <path d="M592.5 662 L810.7 536 L810.7 626 L592.5 752 Z" fill="#10182a" stroke="#2a3549" stroke-width="1.5" stroke-linejoin="round"/>
+      <!-- front details: bumper and horizon light bar -->
+      <g transform="matrix(0.866 0.5 0 1 260 470)">
+        <rect x="0" y="76" width="384" height="14" fill="#0d1420"/>
+        <g filter="url(#glowsite)" opacity="0.9">
+          <path d="M100 45 H160 L168 52 M284 45 H224 L216 52" stroke="#38cbd8" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="192" cy="45" r="6" fill="#38cbd8"/>
+        </g>
+        <path d="M100 45 H160 L168 52 M284 45 H224 L216 52" stroke="#bff3f8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="192" cy="45" r="4" fill="#bff3f8"/>
+      </g>
+      <!-- side ports -->
+      <g transform="matrix(0.866 -0.5 0 1 592.5 662)">
+        <rect x="0" y="76" width="252" height="14" fill="#0b111c"/>
+        <rect x="30" y="38" width="28" height="10" rx="5" fill="#05080e" stroke="#3a4a66"/>
+        <rect x="72" y="38" width="28" height="10" rx="5" fill="#05080e" stroke="#3a4a66"/>
+        <circle cx="126" cy="43" r="6" fill="#05080e" stroke="#3a4a66"/>
+        <circle cx="168" cy="43" r="10" fill="#2a3549" stroke="#93a0b4"/>
+        <circle cx="168" cy="43" r="4" fill="#05080e"/>
+        <rect x="204" y="38" width="22" height="10" rx="3" fill="#05080e" stroke="#3a4a66"/>
+        <rect x="206" y="40" width="9" height="6" rx="2" fill="#f2b33d"/>
+      </g>
+      <!-- engraved wordmark on top -->
+      <g transform="translate(468.3 422.9) matrix(0.866 0.5 -0.866 0.5 0 0) scale(0.6)" fill="none" stroke="#2f3d56" stroke-width="9">
+        <path d="M10 70 V22 A12 12 0 0 1 22 10 H31"/><path d="M1 34.5 H27"/><path d="M42 5.5 V70"/><path d="M58 25.5 V50.5 A15 15 0 0 0 88 50.5"/><path d="M88 25.5 V75 A15 15 0 0 1 73 90 H60"/><path d="M104 25.5 V70"/><path d="M104 45 A15 15 0 0 1 134 45 V70"/>
+      </g>
+      <!-- talk button -->
+      <ellipse cx="618.5" cy="551" rx="46" ry="26.5" fill="#131b2a" stroke="#3a4a66" stroke-width="1.5"/>
+      <ellipse cx="618.5" cy="553" rx="38" ry="21.8" fill="#1a2436"/>
+      <ellipse cx="618.5" cy="553" rx="38" ry="21.8" fill="none" stroke="#38cbd8" stroke-width="2" opacity="0.8"/>
+      <!-- Flyn PTT puck -->
+      <path d="M870 670 V690 A60 22 0 0 0 990 690 V670 Z" fill="#151e2d" stroke="#2a3549" stroke-width="1.5"/>
+      <ellipse cx="930" cy="670" rx="60" ry="22" fill="#1f2a3d" stroke="#3a4a66" stroke-width="1.5"/>
+      <ellipse cx="930" cy="670" rx="40" ry="14.5" fill="none" stroke="#38cbd8" stroke-width="2.5"/>
+      <circle cx="930" cy="670" r="3.5" fill="#38cbd8"/>
+      <path d="M990 685 C1010 688 1020 700 1022 720" stroke="#2a3549" stroke-width="10" fill="none" stroke-linecap="round"/>
+    </svg></div>
+    </div>
+    <div style="border-top: 1px solid #2a3549"><p style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; margin: 0 auto; padding-top: 1rem; padding-bottom: 1rem; font-size: 0.8125rem; line-height: 1.25rem; color: #93a0b4">Prototype expérimental, testé sur simulateur, non certifié pour un usage opérationnel.</p></div>
+  </section>
+  <section id="produit" style="padding: 6rem 0">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 3rem">
+      <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 720px"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #0b7c88">CE QUE FAIT FLYN</span><h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(1.875rem, 5vw, 2.5rem); line-height: 1.12; font-weight: 700; letter-spacing: -0.01em">Un deuxième regard calme dans le cockpit.</h2><p style="margin: 0; font-size: 1.125rem; line-height: 1.75rem; color: #586174">Quand on vole seul, il faut piloter, naviguer et communiquer en même temps. Flyn prend en charge ce qui se rappelle et se vérifie, pour vous laisser ce qui se décide.</p></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem"><div style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1.5rem; border: 1px solid #d6d2c8; border-radius: 10px; background: #ffffff"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b7c88" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M4 12h10M4 18h7"/><path d="M16 15l2 2 4-4"/></svg><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Checklists vocales</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Flyn lit chaque item et attend votre confirmation à la voix. Rien n'est coché à votre place.</p></div><div style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1.5rem; border: 1px solid #d6d2c8; border-radius: 10px; background: #ffffff"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b7c88" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16a8 8 0 0 1 16 0"/><path d="M12 16l4-5"/><path d="M3 20h18"/></svg><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Surveillance des écarts</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Altitude, cap, vitesse, paramètres moteur : un moteur de règles déterministe signale ce qui sort des limites.</p></div><div style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1.5rem; border: 1px solid #d6d2c8; border-radius: 10px; background: #ffffff"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b7c88" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12a7 7 0 0 1 14 0"/><path d="M8.5 12a3.5 3.5 0 0 1 7 0"/><circle cx="12" cy="12" r="1"/><path d="M12 13v8"/></svg><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Rappel des clairances</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">La dernière clairance ATC transcrite et affichée, pour lever un doute sans demander de répéter.</p></div><div style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1.5rem; border: 1px solid #d6d2c8; border-radius: 10px; background: #ffffff"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b7c88" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/><path d="M9 8h6"/></svg><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Documentation sourcée</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Une question sur une procédure ? Réponse tirée de votre POH, avec la section, la page et la révision.</p></div><div style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1.5rem; border: 1px solid #d6d2c8; border-radius: 10px; background: #ffffff"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b7c88" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Préparation du vol</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Météo, NOTAM, carburant et navigation chargés au sol. En vol, Flyn fonctionne hors ligne.</p></div><div style="display: flex; flex-direction: column; gap: 0.75rem; padding: 1.5rem; border: 1px solid #d6d2c8; border-radius: 10px; background: #ffffff"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0b7c88" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 15l3-3 2 2 3-4"/></svg><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Débriefing</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Phases, écarts et alertes horodatés après le vol. Utile pour l'élève comme pour l'instructeur.</p></div></div>
+    </div>
+  </section>
+  <section id="fonctionnement" style="background: #0b111c; padding: 6rem 0">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 3rem">
+      <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 720px"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #38cbd8">COMMENT ÇA MARCHE</span><h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(1.875rem, 5vw, 2.5rem); line-height: 1.12; font-weight: 700; letter-spacing: -0.01em; color: #eef1f5">Préparer, voler, débriefer.</h2></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem"><div style="display: flex; flex-direction: column; gap: 0.75rem; padding-top: 1.25rem; border-top: 2px solid #38cbd8"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 0.875rem; color: #38cbd8">01</span><h3 style="margin: 0; font-size: 1.25rem; line-height: 1.75rem; font-weight: 600; color: #eef1f5">Avant le vol</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #93a0b4">Chargez votre avion, votre navigation, la météo et les NOTAM. Flyn prépare les checklists et les points de vigilance.</p></div><div style="display: flex; flex-direction: column; gap: 0.75rem; padding-top: 1.25rem; border-top: 2px solid #38cbd8"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 0.875rem; color: #38cbd8">02</span><h3 style="margin: 0; font-size: 1.25rem; line-height: 1.75rem; font-weight: 600; color: #eef1f5">Pendant le vol</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #93a0b4">Flyn détecte la phase de vol, déroule les checklists à la voix, surveille les écarts et garde la dernière clairance sous la main.</p></div><div style="display: flex; flex-direction: column; gap: 0.75rem; padding-top: 1.25rem; border-top: 2px solid #38cbd8"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 0.875rem; color: #38cbd8">03</span><h3 style="margin: 0; font-size: 1.25rem; line-height: 1.75rem; font-weight: 600; color: #eef1f5">Après le vol</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #93a0b4">Un débriefing clair : ce qui s'est passé, quand, et ce qui mérite d'être revu avec votre instructeur.</p></div></div>
+      <p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #93a0b4; max-width: 760px">Aujourd'hui, Flyn tourne sur ordinateur et tablette, connecté à un simulateur. Demain, Flyn One : un boîtier autonome qui fonctionne hors ligne, avec ses propres capteurs, branché sur votre casque.</p>
+    </div>
+  </section>
+  <section id="securite" style="padding: 6rem 0">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 3rem">
+      <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 1rem"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #0b7c88">CONÇU POUR LA SÉCURITÉ</span><h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(1.875rem, 5vw, 2.5rem); line-height: 1.12; font-weight: 700; letter-spacing: -0.01em">Une IA qui sait rester à sa place.</h2><p style="margin: 0; font-size: 1.0625rem; line-height: 1.75rem; color: #586174">En aviation, une assistance n'a de valeur que si on peut lui faire confiance. Ces principes ne sont pas des options : ils sont dans l'architecture.</p></div>
+      <div style="flex: 2 1 520px; min-width: 0; display: flex; flex-direction: column"><div style="display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid #d6d2c8"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 500; color: #0b7c88">01</span><div style="display: flex; flex-direction: column; gap: 0.375rem"><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Consultatif, par conception</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Flyn n'a aucune liaison vers les commandes de vol ni le pilote automatique. Le pilote décide, toujours.</p></div></div><div style="display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid #d6d2c8"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 500; color: #0b7c88">02</span><div style="display: flex; flex-direction: column; gap: 0.375rem"><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Deux cerveaux séparés</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Les alertes viennent d'un moteur de règles déterministe et traçable. L'IA conversationnelle ne fait que des suggestions, étiquetées comme telles.</p></div></div><div style="display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid #d6d2c8"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 500; color: #0b7c88">03</span><div style="display: flex; flex-direction: column; gap: 0.375rem"><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Toujours sourcé</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Chaque réponse documentaire affiche sa source, sa version et sa page. Pas de source, pas de réponse.</p></div></div><div style="display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid #d6d2c8"><span style="font-family: 'JetBrains Mono', monospace; font-weight: 500; color: #0b7c88">04</span><div style="display: flex; flex-direction: column; gap: 0.375rem"><h3 style="margin: 0; font-size: 1.125rem; line-height: 1.5rem; font-weight: 600">Silence par défaut</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Flyn parle quand c'est utile. Moins de bruit dans le casque, plus d'attention pour le pilotage.</p></div></div></div>
+    </div>
+  </section>
+  <section style="padding: 0 0 6rem">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-direction: column; gap: 2rem">
+      <div style="display: flex; flex-direction: column; gap: 1rem"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #0b7c88">POUR QUI</span><h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(1.875rem, 5vw, 2.5rem); line-height: 1.12; font-weight: 700; letter-spacing: -0.01em">D'abord l'aviation légère.</h2></div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem"><div style="display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; border-radius: 10px; background: #eae7e0"><h3 style="margin: 0; font-size: 1.0625rem; line-height: 1.5rem; font-weight: 600">Écoles de pilotage et aéroclubs</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Un assistant de briefing et de débriefing pour vos élèves, en simulateur puis en vol.</p></div><div style="display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; border-radius: 10px; background: #eae7e0"><h3 style="margin: 0; font-size: 1.0625rem; line-height: 1.5rem; font-weight: 600">Instructeurs</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Des débriefings factuels et horodatés, pour cibler ce qui compte.</p></div><div style="display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; border-radius: 10px; background: #eae7e0"><h3 style="margin: 0; font-size: 1.0625rem; line-height: 1.5rem; font-weight: 600">Élèves pilotes</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Les bons réflexes de checklist et de phraséologie, répétés sans pression.</p></div><div style="display: flex; flex-direction: column; gap: 0.5rem; padding: 1.5rem; border-radius: 10px; background: #eae7e0"><h3 style="margin: 0; font-size: 1.0625rem; line-height: 1.5rem; font-weight: 600">Pilotes privés et propriétaires</h3><p style="margin: 0; font-size: 0.9375rem; line-height: 1.5rem; color: #586174">Un deuxième regard quand vous volez seul.</p></div></div>
+    </div>
+  </section>
+  <section id="avancees" style="background: #0b111c; padding: 6rem 0">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 3rem">
+      <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 1rem"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #38cbd8">CONSTRUIT EN PUBLIC</span><h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(1.875rem, 5vw, 2.5rem); line-height: 1.12; font-weight: 700; letter-spacing: -0.01em; color: #eef1f5">Où en est Flyn.</h2><p style="margin: 0; font-size: 1.0625rem; line-height: 1.75rem; color: #93a0b4">Chaque étape est documentée : ce qui marche, ce qui casse, ce qu'on apprend. Suivez le projet sur <a href="[LIEN LINKEDIN]" style="color: #38cbd8">LinkedIn</a>.</p></div>
+      <div style="flex: 2 1 520px; min-width: 0; display: flex; flex-direction: column"><div style="display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid #2a3549"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #38cbd8">EN COURS</span><div style="display: flex; flex-direction: column; gap: 0.25rem"><span style="font-size: 1.0625rem; line-height: 1.5rem; font-weight: 600; color: #eef1f5">Prototype sur simulateur X-Plane</span><span style="font-size: 0.9375rem; line-height: 1.5rem; color: #93a0b4">Phases de vol, checklists vocales, moteur de règles.</span></div></div><div style="display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid #2a3549"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #93a0b4">PRÉVU</span><div style="display: flex; flex-direction: column; gap: 0.25rem"><span style="font-size: 1.0625rem; line-height: 1.5rem; font-weight: 600; color: #eef1f5">Assistant documentaire sourcé</span><span style="font-size: 0.9375rem; line-height: 1.5rem; color: #93a0b4">Réponses tirées du POH avec section, page et révision.</span></div></div><div style="display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid #2a3549"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #93a0b4">PRÉVU</span><div style="display: flex; flex-direction: column; gap: 0.25rem"><span style="font-size: 1.0625rem; line-height: 1.5rem; font-weight: 600; color: #eef1f5">Météo, navigation, carburant</span><span style="font-size: 0.9375rem; line-height: 1.5rem; color: #93a0b4">Préparation du vol et aide au déroutement.</span></div></div><div style="display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid #2a3549"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #93a0b4">PRÉVU</span><div style="display: flex; flex-direction: column; gap: 0.25rem"><span style="font-size: 1.0625rem; line-height: 1.5rem; font-weight: 600; color: #eef1f5">Reconnaissance des clairances ATC</span><span style="font-size: 0.9375rem; line-height: 1.5rem; color: #93a0b4">Transcription et rappel, dans les limites techniques et réglementaires.</span></div></div><div style="display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid #2a3549"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #93a0b4">PLUS TARD</span><div style="display: flex; flex-direction: column; gap: 0.25rem"><span style="font-size: 1.0625rem; line-height: 1.5rem; font-weight: 600; color: #eef1f5">Boîtier Flyn One</span><span style="font-size: 0.9375rem; line-height: 1.5rem; color: #93a0b4">Prototype matériel autonome, puis expérimentation encadrée.</span></div></div></div>
+    </div>
+  </section>
+  <section id="tests" style="padding: 6rem 0">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 3rem">
+      <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 1rem"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #0b7c88">PROGRAMME DE TESTS</span><h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: clamp(1.875rem, 5vw, 2.5rem); line-height: 1.12; font-weight: 700; letter-spacing: -0.01em">Testez Flyn sur simulateur.</h2><p style="margin: 0; font-size: 1.0625rem; line-height: 1.75rem; color: #586174">On cherche des pilotes, des élèves, des instructeurs et des écoles pour tester le prototype et nous dire ce qui manque vraiment dans le cockpit. 20 minutes d'échange suffisent pour commencer.</p></div>
+      <form action="[URL_DU_FORMULAIRE]" method="POST" style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 1rem; padding: 2rem; border: 1px solid #d6d2c8; border-radius: 16px; background: #ffffff">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem">
+          <label style="display: flex; flex-direction: column; gap: 0.375rem; font-size: 0.875rem; line-height: 1.25rem; font-weight: 600">Prénom<input type="text" name="prenom" autocomplete="given-name" style="height: 2.75rem; box-sizing: border-box; padding: 0 0.875rem; border: 1px solid #d6d2c8; border-radius: 6px; background: #ffffff; font-family: Inter, sans-serif; font-size: 1rem; color: #0b111c"></label>
+          <label style="display: flex; flex-direction: column; gap: 0.375rem; font-size: 0.875rem; line-height: 1.25rem; font-weight: 600">E-mail<input type="email" name="email" autocomplete="email" style="height: 2.75rem; box-sizing: border-box; padding: 0 0.875rem; border: 1px solid #d6d2c8; border-radius: 6px; background: #ffffff; font-family: Inter, sans-serif; font-size: 1rem; color: #0b111c"></label>
+        </div>
+        <label style="display: flex; flex-direction: column; gap: 0.375rem; font-size: 0.875rem; line-height: 1.25rem; font-weight: 600">Vous êtes
+          <select name="profil" style="height: 2.75rem; box-sizing: border-box; padding: 0 0.875rem; border: 1px solid #d6d2c8; border-radius: 6px; background: #ffffff; font-family: Inter, sans-serif; font-size: 1rem; color: #0b111c"><option>Élève pilote</option><option>Pilote privé</option><option>Instructeur</option><option>École ou aéroclub</option><option>Autre</option></select>
+        </label>
+        <label style="display: flex; flex-direction: column; gap: 0.375rem; font-size: 0.875rem; line-height: 1.25rem; font-weight: 600">Avion ou simulateur habituel<input type="text" name="avion" placeholder="ex. DR400, C172, X-Plane" style="height: 2.75rem; box-sizing: border-box; padding: 0 0.875rem; border: 1px solid #d6d2c8; border-radius: 6px; background: #ffffff; font-family: Inter, sans-serif; font-size: 1rem; color: #0b111c"></label>
+        <label style="display: flex; gap: 0.625rem; align-items: flex-start; font-size: 0.875rem; line-height: 1.25rem; color: #586174"><input type="checkbox" name="consentement" style="width: 1.125rem; height: 1.125rem; margin-top: 0.125rem">J'accepte d'être contacté au sujet des tests de Flyn. Mes données ne sont pas partagées et je peux me désinscrire à tout moment.</label>
+        <button type="submit" style="min-height: 3rem; border: 0; border-radius: 10px; background: #0b111c; color: #eef1f5; font-family: Inter, sans-serif; font-size: 1rem; font-weight: 600">Je veux tester Flyn</button>
+      </form>
+    </div>
+  </section>
+  <section style="padding: 0 0 6rem">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem">
+      <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; padding: 2.5rem; border-radius: 16px; background: #eae7e0">
+        <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 0.75rem"><span style="font-size: 0.75rem; line-height: 1rem; font-weight: 600; letter-spacing: 0.08em; color: #0b7c88">LE FONDATEUR</span><h2 style="margin: 0; font-family: Archivo, sans-serif; font-size: 1.75rem; line-height: 2.25rem; font-weight: 700">Steven Jansen</h2><p style="margin: 0; font-size: 1rem; line-height: 1.625rem; color: #3a4252">Ingénieur aéronautique et spatial (IPSA), théorie ATPL, en Master IA et Big Data. Flyn est né de son mémoire de recherche sur un copilote IA indépendant de l'avionique.</p></div>
+        <a href="[LIEN LINKEDIN STEVEN]" style="min-height: 3rem; display: flex; align-items: center; padding: 0 1.5rem; border-radius: 10px; border: 1px solid #0b111c; color: #0b111c; font-weight: 600; text-decoration: none">Échanger sur LinkedIn</a>
+      </div>
+    </div>
+  </section>
+  <footer style="background: #0b111c; color: #93a0b4">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem 3rem; align-items: center; padding-top: 2.5rem; padding-bottom: 2.5rem; font-size: 0.875rem; line-height: 1.25rem">
+      <a href="#top" aria-label="Flyn, accueil" style="display: flex; align-items: center; gap: 10px; text-decoration: none"><svg width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1a2436"/><g fill="none" stroke="#38cbd8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 30 H23 L27 36"/><path d="M54 30 H41 L37 36"/></g><circle cx="32" cy="30" r="3.5" fill="#38cbd8"/></svg><svg width="48" height="33" viewBox="0 0 140 96" aria-hidden="true"><g fill="none" stroke="#eef1f5" stroke-width="9"><path d="M10 70 V22 A12 12 0 0 1 22 10 H31"/><path d="M1 34.5 H27"/><path d="M42 5.5 V70"/><path d="M58 25.5 V50.5 A15 15 0 0 0 88 50.5"/><path d="M88 25.5 V75 A15 15 0 0 1 73 90 H60"/><path d="M104 25.5 V70"/><path d="M104 45 A15 15 0 0 1 134 45 V70"/></g></svg></a>
+      <span>Flyn · [RAISON SOCIALE · SIREN] · Paris</span>
+      <a href="mailto:[CONTACT@DOMAINE]" style="color: #c7cfdb">[contact@domaine]</a>
+      <a href="[MENTIONS LÉGALES]" style="color: #c7cfdb">Mentions légales</a>
+      <a href="[CONFIDENTIALITÉ]" style="color: #c7cfdb">Confidentialité</a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

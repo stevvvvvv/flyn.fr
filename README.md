@@ -1,7 +1,30 @@
 # flyn.fr
 
 Site vitrine de **Flyn**, copilote IA consultatif pour l'aviation légère.
-HTML et CSS statiques, sans build : ouvrir `index.html` dans un navigateur suffit.
+HTML, CSS et JavaScript statiques, sans build. Le boîtier Flyn One est un modèle 3D (three.js r170,
+hébergé dans `assets/vendor/three`, licence MIT) qui pivote au fil du scroll.
+
+## Voir le site en local
+
+Le modèle 3D est un module JavaScript : il ne se charge pas en double-cliquant sur `index.html`
+(le navigateur bloque les modules en `file://`, le site affiche alors l'illustration de secours).
+Lancer un petit serveur :
+
+```bash
+python -m http.server 8000
+```
+
+puis ouvrir http://localhost:8000.
+
+## Organisation
+
+| Fichier | Rôle |
+|---|---|
+| `index.html` | La page |
+| `assets/css/site.css` | Styles (charte Flyn) |
+| `assets/js/flyn-one.js` | Modèle 3D du boîtier, caméras par étape, barre lumineuse |
+| `assets/img/` | Captures de l'app (prototype, vol simulé) |
+| `assets/vendor/three/` | three.js et deux modules d'exemple, versions figées |
 
 ## Mettre en ligne (GitHub Pages)
 

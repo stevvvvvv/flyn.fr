@@ -272,7 +272,7 @@
   <div class="wrap foot-in">
     <a class="nav-logo" href="#top" aria-label="Flyn, haut de page"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1a2436"/><g fill="none" stroke="#38cbd8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 30 H23 L27 36"/><path d="M54 30 H41 L37 36"/></g><circle cx="32" cy="30" r="3.5" fill="#38cbd8"/></svg><svg width="48" height="33" viewBox="0 0 140 96" aria-hidden="true"><g fill="none" stroke="#eef1f5" stroke-width="9"><path d="M10 70 V22 A12 12 0 0 1 22 10 H31"/><path d="M1 34.5 H27"/><path d="M42 5.5 V70"/><path d="M58 25.5 V50.5 A15 15 0 0 0 88 50.5"/><path d="M88 25.5 V75 A15 15 0 0 1 73 90 H60"/><path d="M104 25.5 V70"/><path d="M104 45 A15 15 0 0 1 134 45 V70"/></g></svg></a>
     <span>Flyn · [RAISON SOCIALE · SIREN] · Paris</span>
-    <a href="mailto:[CONTACT@DOMAINE]">[contact@domaine]</a>
+    <a href="mailto:contact@flyn.fr">contact@flyn.fr</a>
     <a href="mentions-legales.html">Mentions légales</a>
     <a href="confidentialite.html">Confidentialité</a>
     <small>Flyn One est un concept en développement : rendu 3D et caractéristiques non définitifs. Prototype non certifié.</small>
@@ -314,7 +314,7 @@ const status = document.getElementById('signup-status');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (form.action.includes('%5BURL') || form.getAttribute('action').startsWith('[')) {
-    status.textContent = 'Le formulaire n\u2019est pas encore branché. Écrivez-nous en attendant : [contact@domaine].';
+    status.textContent = 'Le formulaire n\u2019est pas encore branché. Écrivez-nous en attendant : contact@flyn.fr.';
     return;
   }
   status.textContent = 'Envoi…';
@@ -324,7 +324,7 @@ form.addEventListener('submit', async (e) => {
     form.reset();
     status.textContent = 'Merci ! On vous recontacte très vite pour organiser un premier échange.';
   } catch {
-    status.textContent = 'L\u2019envoi a échoué. Réessayez, ou écrivez-nous : [contact@domaine].';
+    status.textContent = 'L\u2019envoi a échoué. Réessayez, ou écrivez-nous : contact@flyn.fr.';
   }
 });
 addEventListener('resize', onScroll);

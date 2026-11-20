@@ -46,8 +46,12 @@ Le champ caché `_gotcha` bloque les robots.
 
 ## À compléter avant d'annoncer le site
 
-- `index.html` : `[LIEN LINKEDIN]`, `[LIEN LINKEDIN STEVEN]`, `[contact@domaine]`, `[RAISON SOCIALE · SIREN]`.
+- `index.html` : `[LIEN LINKEDIN]`, `[LIEN LINKEDIN STEVEN]`, `[RAISON SOCIALE · SIREN]`.
 - `mentions-legales.html` et `confidentialite.html` : les champs surlignés en jaune (société, adresse, SIREN,
   service de formulaire). Ces deux pages sont des modèles : à faire relire avant publication.
 
 Rechercher `[` dans `index.html` pour trouver tous les champs à remplir.
+
+## Domaine
+
+Le site est servi sur https://flyn.fr par GitHub Pages (fichier `CNAME`). DNS chez OVH : 4 enregistrements A vers GitHub Pages et `www` en CNAME vers `stevvvvvv.github.io`. Ne pas toucher aux enregistrements MX, SPF, DKIM et SRV de la messagerie Zimbra.
